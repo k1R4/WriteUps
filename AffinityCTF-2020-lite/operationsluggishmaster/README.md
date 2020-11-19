@@ -80,11 +80,21 @@ gpg: encrypted with 3072-bit RSA key, ID 66957A6ECFB9DA76, created 2020-11-11
       "Franciszek Warcislaw <franciszek.warcislaw@gmail.com>"
 ```
 
-Inspecting the decoded message in doc we see that it is a PGP message. So we decrypt it again
+Inspecting the decoded message in the file doc we see that it is a PGP message. So we decrypt it again
 
 ```
 ➜  ~ gpg --output out --decrypt doc
 gpg: AES256.CFB encrypted data
 gpg: encrypted with 1 passphrase
 ```
-Running this command prompts us with a passphrase which is ```operationsluggishmaster```
+Running this command prompts us with a passphrase which is: ```operationsluggishmaster```
+
+Inspecting the file out we see that it is a https link: https://docs.google.com/document/d/1yXSpavYyF4ilTnFhvBSytf6UuMcDUPqQeCecIXCkUCU/edit
+
+On visiting this link we see a google doc with three images and some text.
+We see something interesting on the top right of the third image:
+
+![emu](https://cdn.discordapp.com/attachments/778227191774707752/778276058087948308/image3.jpg)
+
+Thats the flag!
+Flag: ```AFFCTF{GuineaPigsAreTooBigForRunningWheels}```
