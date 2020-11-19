@@ -43,8 +43,8 @@ gpg:       secret keys read: 1
 gpg:  secret keys unchanged: 1
 ```
 
-After import we find out the gmail account mention in the wordpress blog. So we send a test mail to the gmail.
-We recieve a bot reply that gives us:
+After import we find out the gmail account mentioned in the wordpress blog. So we send a test mail to the gmail obtained.
+We recieve aan autoreply that gives us:
 
 ```
 This is my time for vacation! I will be back before 01.01.2021.
