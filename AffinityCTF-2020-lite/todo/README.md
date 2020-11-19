@@ -39,3 +39,33 @@ def encode(msg):
 
     return output
 ```
+
+Decoding fn will involve dividing numeric parts of hashed string by 4660 to get original number and dividing the ASCII deciaml value of chars by 16 and converting back to ASCII.
+
+```py
+def decode(msg):
+    output = ''
+    i = 0
+    while(i<len(msg)):
+        if not('0' <= msg[i] <= '9'):
+         output += chr(ord(msg[i])//0x10)
+         i+=1
+        else:
+            temp = ''
+            while('0' <= msg[i] <= '9'):
+                temp = msg[i] + temp
+                i+=1
+                if i >= len(msg):
+                    break
+            output += str(int(temp)//0x1234)
+         
+    return output
+```
+
+Now running, 
+```py
+print(unshift(decode(hashed))
+```
+will give us the flag.
+
+Flag:```AFFCTF{4lw4y5_f1n1sh_your_job!!1!}```
