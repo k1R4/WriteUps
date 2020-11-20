@@ -68,4 +68,6 @@ print(unshift(decode(hashed))
 ```
 will give us the flag.
 
+(Credit to github.com/AmunRha for the decode and unshift functions)
+
 Flag:```AFFCTF{4lw4y5_f1n1sh_your_job!!1!}```
