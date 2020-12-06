@@ -7,10 +7,8 @@ vuln = ELF('Downloads/vuln')
 io = remote('jupiter.challenges.picoctf.org',38467)
 rop = ROP(vuln)
 
-i = 0
 io.recv()
 while True:
-    i += 1
     io.recv()
     io.sendline("50")
     resp = io.recv()
