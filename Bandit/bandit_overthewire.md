@@ -9,7 +9,7 @@ output:
 # ===Level 1 -> Level 2===
 
 cmds:
-    ls -A
+    ls -A\
     cat ./-
     
 output:
@@ -26,7 +26,7 @@ output:
 # ===Level 3 -> Level 4===
 
 cmds:
-    ls -A inhere/
+    ls -A inhere/\
     cat inhere/.hidden
 
 output:
@@ -35,7 +35,7 @@ output:
 # ===Level 4 -> Level 5===
 
 cmds:
-    ls -A inhere/
+    ls -A inhere/\
     cat inhere/-file0x (-file07 contained flag)
    
 output:
@@ -44,7 +44,7 @@ output:
 # ===Lvel 5 -> Level 6===
 
 cmds:
-    find inhere/ -readable -size 1033c
+    find inhere/ -readable -size 1033c\
     cat inhere/maybehere07/.file2
     
 output:
@@ -53,7 +53,7 @@ output:
 # ===Level 6 -> Level 7===
 
 cmds:
-    find / -size 33c -group bandit6 -user bandit7
+    find / -size 33c -group bandit6 -user bandit7\
     cat /var/lib/dpkg/info/bandit7.password
     
 output:
@@ -102,35 +102,35 @@ output:
 # ===Level 12 -> Level 13===
 
 cmds:
-   mkdir /tmp/zg1
-   cp data.txt /tmp/zg1/
-   xxd -r data.txt > uncomp
-   file uncomp
-   mv uncomp uncomp.gz
-   gzip -d uncomp.gz
-   file uncomp
-   mv uncomp uncomp.bz
-   bzip2 -d uncomp.bz
-   file uncomp
-   mv uncomp uncomp.tar
-   tar -xf uncomp.tar
-   ls
-   file data5.bin
-   mv data5.bin data.tar
-   tar -xf data.tar
-   ls
-   file data6.bin
-   mv data6.bin data.bz
-   bzip2 -d data.bz
-   file data
-   mv data data2.tar
-   tar -xf data2.tar
-   ls
-   file data8.bin
-   mv data8.bin data.gz
-   gzip -d data.gz
-   file data
-   cat data
+   mkdir /tmp/zg1\
+   cp data.txt /tmp/zg1/\
+   xxd -r data.txt > uncomp\
+   file uncomp\
+   mv uncomp uncomp.gz\
+   gzip -d uncomp.gz\
+   file uncomp\
+   mv uncomp uncomp.bz\
+   bzip2 -d uncomp.bz\
+   file uncomp\
+   mv uncomp uncomp.tar\
+   tar -xf uncomp.tar\
+   ls\
+   file data5.bin\
+   mv data5.bin data.tar\
+   tar -xf data.tar\
+   ls\
+   file data6.bin\
+   mv data6.bin data.bz\
+   bzip2 -d data.bz\
+   file data\
+   mv data data2.tar\
+   tar -xf data2.tar\
+   ls\
+   file data8.bin\
+   mv data8.bin data.gz\
+   gzip -d data.gz\
+   file data\
+   cat data\
 
 output:
     8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
@@ -138,7 +138,7 @@ output:
 # ===Level 13 -> Level 14===
 
 cmds:
-    ssh -i sshkey.private bandit14@localhost
+    ssh -i sshkey.private bandit14@localhost\
     cat /etc/bandit_pass/bandit14
 
 output:
