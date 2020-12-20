@@ -17,91 +17,91 @@
 
 # ===Level 2 -> Level 3===
 
-cmds:\
+## cmds:
     cat spaces\ in\ this\ filename
     
-output:\
+## output:\
     UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
 # ===Level 3 -> Level 4===
 
-cmds:\
+## cmds:
     ls -A inhere/\
     cat inhere/.hidden
 
-output:\
+## output:
     pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 
 # ===Level 4 -> Level 5===
 
-cmds:\
+## cmds:
     ls -A inhere/\
     cat inhere/-file0x (-file07 contained flag)
    
-output:\
+## output:
     koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 
 # ===Lvel 5 -> Level 6===
 
-cmds:\
+## cmds:
     find inhere/ -readable -size 1033c\
     cat inhere/maybehere07/.file2
     
-output:\
+## output:
     DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
 # ===Level 6 -> Level 7===
 
-cmds:\
+## cmds:
     find / -size 33c -group bandit6 -user bandit7\
     cat /var/lib/dpkg/info/bandit7.password
     
-output:\
+## output:
     HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
 # ===Level 7 -> Level 8===
 
-cmds:\
+## cmds:
     grep "millionth*" data.txt 
     
-output:\
+## output:
     cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
 # ===Level 8 -> Level 9===
 
-cmds:\
+## cmds:
     cat data.txt | sort | uniq -u
 
-output:\
+## output:
     UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
 # ===Level 9 -> Level 10===
 
-cmds:\
+## cmds:
     strings data.txt | grep "====*"
 
-output:\
+## output:
     truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
 # ===Level 10 -> Level 11===
 
-cmds:\
+## cmds:
     base64 -d data.txt
 
-output:\
+## output:
     IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 # ===Level 11 -> Level 12===
 
-cmds:\
+## cmds:
     cat data.txt|tr '[a-z]' '[n-za-m]'|tr '[A-Z]' '[N-ZA-M]'
 
-output:\
+## output:
     5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 # ===Level 12 -> Level 13===
 
-cmds:\
+## cmds:
    mkdir /tmp/zg1\
    cp data.txt /tmp/zg1/\
    xxd -r data.txt > uncomp\
@@ -132,22 +132,22 @@ cmds:\
    file data\
    cat data\
 
-output:\
+## output:
     8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 # ===Level 13 -> Level 14===
 
-cmds:\
+## cmds:
     ssh -i sshkey.private bandit14@localhost\
     cat /etc/bandit_pass/bandit14
 
-output:\
+## output:
     4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 
 # ===Level 14 -> Level 15===
 
-cmds:\
+## cmds:
     nc localhost 30000
 
-output:\
+## output:
     BfMYroe26WYalil77FoDi9qh59eK5xNr
