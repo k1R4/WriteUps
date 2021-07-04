@@ -2,8 +2,10 @@ from node import Node
 
 class LinkedList():
 
-	def __init__(self):
-		self.head = None
+	def __init__(self,lst=[]):
+		self.head = lst[0]
+		for i in range(len(lst)-1):
+			lst[i].next = lst[i+1]
 
 	def display(self):
 		if self.head:
@@ -16,11 +18,9 @@ class LinkedList():
 			print()
 
 if __name__ == "__main__":
-	lst = LinkedList()
-	lst.head = Node("first")
-	second = Node("second")
-	third = Node("third")
-	lst.head.next = second
-	second.next = third
+	first = Node(1)
+	second = Node(2)
+	third = Node(3)
+	lst = LinkedList([first,second,third])
 
 	lst.display()
